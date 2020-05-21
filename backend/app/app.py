@@ -66,6 +66,9 @@ def create_app():
         from .get_cart import cart_bp as cart_blueprint
         app.register_blueprint(cart_blueprint)
         
+        from .wishlist import wishlist_bp as wishlist_blueprint
+        app.register_blueprint(wishlist_blueprint)
+        
         #Initializing Scheduler - event will occur every 30 seconds
         scheduler.add_job(check_price, 'interval', seconds=30)          
         scheduler.start()
