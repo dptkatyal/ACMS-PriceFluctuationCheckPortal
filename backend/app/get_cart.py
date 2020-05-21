@@ -7,7 +7,7 @@ from .models import db, User
 from sqlalchemy import update
 cart_bp = Blueprint('cart_bp', __name__)
 
-@cart_bp.route('/customer' , methods = ['GET'])
+@cart_bp.route('/customer' ,  methods = ['POST' , 'GET'])
 def get_cart():
     id = current_user.id
     prod = []
