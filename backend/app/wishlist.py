@@ -7,3 +7,4 @@ wishlist_bp = Blueprint('wishlist_bp', __name__)
 
 @wishlist_bp.route('/wishlist' , methods = ['GET','POST'])
 def edit_wishlist():
+  return "Wishlist"
